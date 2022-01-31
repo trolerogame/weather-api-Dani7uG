@@ -4,9 +4,14 @@ export const ContainClimeSearch = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
     width: 100%;
-    background-color:#2c3e50;
+    background-color:rgb(30,33,58);
     padding:15px 0 30px 0;
+    z-index: 1;
+    @media (min-width: 768px) {
+        justify-content:space-around;
+    }
 `
 
 export const ContainButtons = styled.div`
@@ -45,6 +50,7 @@ export const ContainImgClime = styled.div`
     background-position:50% 50%;
     place-content: center;
     width:100%;
+    height: 220px;
     padding:30px 0;
     margin:20px 0;
     img{
@@ -67,6 +73,11 @@ export const ContainDegrees = styled.div`
         font-size:40px;
         padding-top:20px;
         font-weight: 300;
+    }
+    @media (min-width: 768px){
+        p{
+            font-size:140px;
+        }
     }
 `
 
@@ -99,4 +110,80 @@ export const Country = styled.p`
         height:25px;
         margin:0 10px;
     }
+`
+
+export const ContainSearch = styled.div`
+    display: flex;
+    width: 100%;
+    padding-top:30px;
+    z-index:1;
+    position: relative;
+    height: 625px;
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 768px) {
+        height:calc(100vh - 75px);
+    }
+`
+
+export const ContainInputSearch = styled.form`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    input,button{
+        outline: none;
+        border:none;
+        margin:0 10px;
+        height: 50px;
+    }
+    input{
+        background-color:transparent;
+        border:1px solid #fff;
+        padding:0;
+        padding-left:30px;
+        font-size:18px;
+        color:#fff;
+    }
+    button{
+        width: 100px;
+        background-color:#5352ed;
+        color:#fff;
+        font-size:18px;
+        cursor: pointer;
+    }
+`
+
+
+export const ContainItemsSearch = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top:40px;
+    width: 100%;
+    button{
+        margin:20px;
+        width:calc(100% - 40px);
+        height:60px;
+        background-color:transparent;
+        border:none;
+        outline:none;
+        color:#fff;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        font-size:20px;
+        transition: all .1s linear;
+    }
+    button:hover{
+        outline:1px solid #bbb;
+    }
+`
+
+export const Close = styled.img`
+    width: 15px;
+    position: absolute;
+    right:10px;
+    top:-2px;
+    z-index: 2;
 `

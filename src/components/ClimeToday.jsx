@@ -9,6 +9,7 @@ import {
 	Time,
 	Country,
 } from '../styles/styleClimeSearch'
+import { formatDate } from '../utils/formatDate'
 const ClimeToday = ({
 	country,
 	setSearch,
@@ -16,12 +17,7 @@ const ClimeToday = ({
 	the_temp,
 	weather_state_name,
 }) => {
-	const today = new Date(applicable_date || new Date().toString())
-		.toString()
-		.split(' ')
-		.slice(0, 3)
-		.join(' ')
-		.replace(' ', ', ')
+	const today = formatDate(applicable_date)
 	return (
 		<>
 			<ContainButtons>
@@ -37,7 +33,7 @@ const ClimeToday = ({
 					src={`../${
 						weather_state_name
 							? weather_state_name.replaceAll(' ', '')
-							: ''
+							: 'Clear'
 					}.png`}
 					alt=""
 				/>

@@ -28,19 +28,20 @@ const App = () => {
 				getClime(null, latitude, longitude)
 			})
 		}
-
 		getClime()
 	}, [])
+
 	return (
 		<>
 			<StyleGlobal />
 			<ClimeTodayAndSearch
+				getClime={getClime}
 				country={country}
 				clime={clime[0]}
 				search={search}
 				setSearch={setSearch}
 			/>
-			<ClimeWeeklyHightlights />
+			<ClimeWeeklyHightlights climes={clime} />
 		</>
 	)
 }
