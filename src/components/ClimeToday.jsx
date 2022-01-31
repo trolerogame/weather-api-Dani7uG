@@ -30,7 +30,7 @@ const ClimeToday = ({
 			</ContainButtons>
 			<ContainImgClime>
 				<img
-					src={`../${
+					src={`../weather-api-Dani7uG/${
 						weather_state_name
 							? weather_state_name.replaceAll(' ', '')
 							: 'Clear'
@@ -47,7 +47,7 @@ const ClimeToday = ({
 				Today <span>•</span> {today}
 			</Time>
 			<Country>
-				<img src="../map-marker-alt-solid.svg" alt="" /> {country}
+				<img src="../weather-api-Dani7uG/map-marker-alt-solid.svg" alt="" /> {country}
 			</Country>
 		</>
 	)

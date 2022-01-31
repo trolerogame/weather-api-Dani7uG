@@ -25,7 +25,7 @@ const HightlightsItem = ({
 				</InfoClimeToday>
 				<ContainCompass deg={Math.ceil(wind_direction)}>
 					<div>
-						<img src="../location-arrow-solid.svg" alt="" />
+						<img src="../weather-api-Dani7uG/location-arrow-solid.svg" alt="" />
 					</div>
 					<Text>{wind_direction_compass}</Text>
 				</ContainCompass>

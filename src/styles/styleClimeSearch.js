@@ -46,7 +46,7 @@ export const Pointer = styled.button`
 
 export const ContainImgClime = styled.div`
     display:grid;
-    background: url(${`../Cloud-background.png`});
+    background: url(${`../weather-api-Dani7uG/Cloud-background.png`});
     background-position:50% 50%;
     place-content: center;
     width:100%;

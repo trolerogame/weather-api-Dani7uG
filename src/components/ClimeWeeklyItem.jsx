@@ -18,7 +18,7 @@ const ClimeWeeklyItem = ({climes}) => {
 							: formatDate(clime.applicable_date)}
 					</Text>
 					<ImgClime
-						src={`../${clime.weather_state_name.replaceAll(
+						src={`../weather-api-Dani7uG/${clime.weather_state_name.replaceAll(
 							' ',
 							''
 						)}.png`}

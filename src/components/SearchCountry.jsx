@@ -21,7 +21,7 @@ const SearchCountry = ({ getClime,setSearch }) => {
 
 	return (
 		<ContainSearch>
-			<Close src="../times-solid.svg" alt="times-solid" onClick={() => setSearch(false)}  />
+			<Close src="../weather-api-Dani7uG/times-solid.svg" alt="times-solid" onClick={() => setSearch(false)}  />
 			<ContainInputSearch>
 				<input type="text" ref={input} placeholder="search location" />
 				<button onClick={getCountries}>Search</button>
@@ -29,7 +29,7 @@ const SearchCountry = ({ getClime,setSearch }) => {
 			<ContainItemsSearch>
 				{countries.map((country, i) => (
 					<button onClick={() => updateClime(country.woeid)} key={i}>
-						<p>{country.title}</p> <img src="../angle-right-solid.svg" alt="" />
+						<p>{country.title}</p> <img src="../weather-api-Dani7uG/angle-right-solid.svg" alt="" />
 					</button>
 				))}
 			</ContainItemsSearch>
