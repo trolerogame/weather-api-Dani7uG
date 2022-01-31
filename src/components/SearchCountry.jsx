@@ -29,7 +29,7 @@ const SearchCountry = ({ getClime,setSearch }) => {
 			<ContainItemsSearch>
 				{countries.map((country, i) => (
 					<button onClick={() => updateClime(country.woeid)} key={i}>
-						{country.title}
+						<p>{country.title}</p> <img src="../angle-right-solid.svg" alt="" />
 					</button>
 				))}
 			</ContainItemsSearch>

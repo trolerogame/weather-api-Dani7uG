@@ -174,9 +174,13 @@ export const ContainItemsSearch = styled.div`
         align-items:center;
         font-size:20px;
         transition: all .1s linear;
+        cursor:pointer;
     }
     button:hover{
         outline:1px solid #bbb;
+    }
+    img{
+        width:10px;
     }
 `
 

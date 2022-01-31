@@ -9,7 +9,7 @@ import {
 import { formatDate } from '../utils/formatDate'
 const ClimeWeeklyItem = ({climes}) => {
 	return (
-		<ContainClimes>
+		<ContainClimes center>
 			{climes.slice(1, climes.length).map((clime, i) => (
 				<ContainDataClime key={i}>
 					<Text>

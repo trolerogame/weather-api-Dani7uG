@@ -4,24 +4,31 @@ import styled from 'styled-components'
 
 export const ContainClimesHighlight = styled.div`
     background-color:rgb(16,14,29);
+    padding:80px 0
+    ;
     height:auto;
-    padding:40px 0;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    .flex {
+        display:flex;
+    }
+    .justify-center{
+        justify-content: center;
+    }
+    #containerWidth{
+        width:130ch;
+        height:auto;
+    }
     h3{
         color:#fff;
         padding:20px;
         font-size:30px;
+
     }
     @media(min-width: 768px) {
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-        #ContainClimesAndTitle{
-            display:flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        
     }
 `
 
@@ -31,6 +38,7 @@ export const ContainClimes = styled.div`
     margin:0 20px;
     gap:40px 20px;
     flex-wrap: wrap;
+    justify-content:${props => props.center ? 'center' : 'start'};
 `
 
 export const ContainDataClime = styled.div`
@@ -44,7 +52,8 @@ export const ContainDataClime = styled.div`
 `
 
 export const ContainDataClimeToday = styled(ContainDataClime)`
-    width:350px;
+    max-width:100%;
+    width:380px;
     height:auto;
     padding:30px;
 `
