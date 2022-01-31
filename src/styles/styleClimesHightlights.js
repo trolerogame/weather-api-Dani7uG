@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const ContainClimesHighlight = styled.div`
     background-color:rgb(16,14,29);
-    padding:80px 0
+    padding-top:80px
     ;
     height:auto;
     display: flex;
@@ -62,6 +62,7 @@ export const Text = styled.p`
     color:#fff;
     font-size:18px;
     margin:0;
+    text-align:center;
 `
 
 
