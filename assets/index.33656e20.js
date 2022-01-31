@@ -1,4 +1,4 @@
-var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prototype.hasOwnProperty,$=Object.prototype.propertyIsEnumerable;var v=(t,i,r)=>i in t?M(t,i,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[i]=r,m=(t,i)=>{for(var r in i||(i={}))T.call(i,r)&&v(t,r,i[r]);if(C)for(var r of C(i))$.call(i,r)&&v(t,r,i[r]);return t};import{W as D,s as c,j as y,r as f,R as I,a as H}from"./vendor.75a39ec1.js";const P=function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))l(n);new MutationObserver(n=>{for(const a of n)if(a.type==="childList")for(const d of a.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&l(d)}).observe(document,{childList:!0,subtree:!0});function r(n){const a={};return n.integrity&&(a.integrity=n.integrity),n.referrerpolicy&&(a.referrerPolicy=n.referrerpolicy),n.crossorigin==="use-credentials"?a.credentials="include":n.crossorigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function l(n){if(n.ep)return;n.ep=!0;const a=r(n);fetch(n.href,a)}};P();const B=D`
+var D=Object.defineProperty;var C=Object.getOwnPropertySymbols;var M=Object.prototype.hasOwnProperty,T=Object.prototype.propertyIsEnumerable;var v=(t,i,r)=>i in t?D(t,i,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[i]=r,m=(t,i)=>{for(var r in i||(i={}))M.call(i,r)&&v(t,r,i[r]);if(C)for(var r of C(i))T.call(i,r)&&v(t,r,i[r]);return t};import{W as $,s as a,j as y,r as f,R as G,a as I}from"./vendor.75a39ec1.js";const H=function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))l(n);new MutationObserver(n=>{for(const c of n)if(c.type==="childList")for(const d of c.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&l(d)}).observe(document,{childList:!0,subtree:!0});function r(n){const c={};return n.integrity&&(c.integrity=n.integrity),n.referrerpolicy&&(c.referrerPolicy=n.referrerpolicy),n.crossorigin==="use-credentials"?c.credentials="include":n.crossorigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function l(n){if(n.ep)return;n.ep=!0;const c=r(n);fetch(n.href,c)}};H();const P=$`
     body{
         font-family: 'Lato', sans-serif;
         font-family: 'Poppins', sans-serif;
@@ -23,7 +23,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
             grid-template-rows: 1fr;
         }
     }
-`,W=c.div`
+`,B=a.div`
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +35,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     @media (min-width: 768px) {
         justify-content:space-around;
     }
-`,A=c.div`
+`,W=a.div`
     display:flex;
     justify-content:space-between;
     width: calc(100% - 20px);
@@ -48,20 +48,20 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
         outline: none;
         cursor: pointer;
     }
-`,L=c.button`
+`,A=a.button`
     height:35px;
     font-size:18px;
     padding:20px 15px;
     line-height:0;
-`,R=c.button`
+`,L=a.button`
     width:40px;
     height: 40px;
     border-radius:50%;
     display:grid;
     place-content: center;
-`,O=c.div`
+`,R=a.div`
     display:grid;
-    background: url(${"../Cloud-background.png"});
+    background: url(${"../weather-api-Dani7uG/Cloud-background.png"});
     background-position:50% 50%;
     place-content: center;
     width:100%;
@@ -71,7 +71,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     img{
         width: 130px;
     }
-`,N=c.div`
+`,O=a.div`
     display:flex;
     align-items: center;
     p,b{
@@ -92,12 +92,12 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
             font-size:140px;
         }
     }
-`,E=c.h3`
+`,N=a.h3`
     font-size:30px;
     color:#fff;
     font-weight: 400;
     margin:0;
-`,F=c.p`
+`,E=a.p`
     color:#747d8c;
     font-size:20px;
     font-weight: bold;
@@ -105,7 +105,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     span{
         margin:0 10px;
     }
-`,_=c.p`
+`,F=a.p`
     display:flex;
     align-items: center;
     color:#747d8c;
@@ -116,7 +116,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
         height:25px;
         margin:0 10px;
     }
-`,q=c.div`
+`,_=a.div`
     display: flex;
     width: 100%;
     padding-top:30px;
@@ -129,7 +129,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     @media (min-width: 768px) {
         height:calc(100vh - 75px);
     }
-`,G=c.form`
+`,q=a.form`
     display: flex;
     justify-content: center;
     width: 100%;
@@ -155,7 +155,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
         font-size:18px;
         cursor: pointer;
     }
-`,K=c.div`
+`,K=a.div`
     display: flex;
     flex-direction: column;
     margin-top:40px;
@@ -181,13 +181,13 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     img{
         width:10px;
     }
-`,V=c.img`
+`,V=a.img`
     width: 15px;
     position: absolute;
     right:10px;
     top:-2px;
     z-index: 2;
-`,j=t=>new Date(t||new Date().toString()).toString().split(" ").slice(0,3).join(" ").replace(" ",", "),e=y.exports.jsx,o=y.exports.jsxs,k=y.exports.Fragment,J=({country:t,setSearch:i,applicable_date:r,the_temp:l,weather_state_name:n})=>{const a=j(r);return o(k,{children:[o(A,{children:[e(L,{onClick:()=>i(!0),children:"Search for places"}),e(R,{children:e("img",{src:"",alt:""})})]}),e(O,{children:e("img",{src:`../${n?n.replaceAll(" ",""):"Clear"}.png`,alt:""})}),o(N,{children:[e("p",{children:Math.ceil(l||0)}),e("b",{children:"\xB0C"})]}),e(E,{children:"Shower"}),o(F,{children:["Today ",e("span",{children:"\u2022"})," ",a]}),o(_,{children:[e("img",{src:"../map-marker-alt-solid.svg",alt:""})," ",t]})]})},b=async t=>await(await fetch(t)).json(),Q=({getClime:t,setSearch:i})=>{const[r,l]=f.exports.useState([]),n=f.exports.useRef(null),a=async s=>{s.preventDefault();const p=await b(`https://www.metaweather.com/api/location/search?query=${n.current.value}`);l(p)},d=s=>{t(s),n.current.value="",l([])};return o(q,{children:[e(V,{src:"../times-solid.svg",alt:"times-solid",onClick:()=>i(!1)}),o(G,{children:[e("input",{type:"text",ref:n,placeholder:"search location"}),e("button",{onClick:a,children:"Search"})]}),e(K,{children:r.map((s,p)=>o("button",{onClick:()=>d(s.woeid),children:[e("p",{children:s.title})," ",e("img",{src:"../angle-right-solid.svg",alt:""})]},p))})]})},U=({getClime:t,country:i,clime:r,search:l,setSearch:n})=>e(W,{children:l?e(Q,{getClime:t,setSearch:n}):e(J,m({setSearch:n,country:i},r))}),X=c.div`
+`,j=t=>new Date(t||new Date().toString()).toString().split(" ").slice(0,3).join(" ").replace(" ",", "),e=y.exports.jsx,o=y.exports.jsxs,k=y.exports.Fragment,J=({country:t,setSearch:i,applicable_date:r,the_temp:l,weather_state_name:n})=>{const c=j(r);return o(k,{children:[o(W,{children:[e(A,{onClick:()=>i(!0),children:"Search for places"}),e(L,{children:e("img",{src:"",alt:""})})]}),e(R,{children:e("img",{src:`../weather-api-Dani7uG/${n?n.replaceAll(" ",""):"Clear"}.png`,alt:""})}),o(O,{children:[e("p",{children:Math.ceil(l||0)}),e("b",{children:"\xB0C"})]}),e(N,{children:"Shower"}),o(E,{children:["Today ",e("span",{children:"\u2022"})," ",c]}),o(F,{children:[e("img",{src:"../weather-api-Dani7uG/map-marker-alt-solid.svg",alt:""})," ",t]})]})},w=async t=>await(await fetch(t)).json(),Q=({getClime:t,setSearch:i})=>{const[r,l]=f.exports.useState([]),n=f.exports.useRef(null),c=async s=>{s.preventDefault();const p=await w(`https://www.metaweather.com/api/location/search?query=${n.current.value}`);l(p)},d=s=>{t(s),n.current.value="",l([])};return o(_,{children:[e(V,{src:"../weather-api-Dani7uG/times-solid.svg",alt:"times-solid",onClick:()=>i(!1)}),o(q,{children:[e("input",{type:"text",ref:n,placeholder:"search location"}),e("button",{onClick:c,children:"Search"})]}),e(K,{children:r.map((s,p)=>o("button",{onClick:()=>d(s.woeid),children:[e("p",{children:s.title})," ",e("img",{src:"../weather-api-Dani7uG/angle-right-solid.svg",alt:""})]},p))})]})},U=({getClime:t,country:i,clime:r,search:l,setSearch:n})=>e(B,{children:l?e(Q,{getClime:t,setSearch:n}):e(J,m({setSearch:n,country:i},r))}),X=a.div`
     background-color:rgb(16,14,29);
     padding-top:80px
     ;
@@ -215,13 +215,13 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     @media(min-width: 768px) {
         
     }
-`,S=c.div`
+`,S=a.div`
     display:flex;
     margin:0 20px;
     gap:40px 20px;
     flex-wrap: wrap;
     justify-content:${t=>t.center?"center":"start"};
-`,z=c.div`
+`,z=a.div`
     width:165px;
     height:225px;
     background-color:rgb(30,33,58);
@@ -229,28 +229,28 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`,u=c(z)`
+`,u=a(z)`
     max-width:100%;
     width:380px;
     height:auto;
     padding:30px;
-`,h=c.p`
+`,h=a.p`
     color:#fff;
     font-size:18px;
     margin:0;
     text-align:center;
-`,Y=c.img`
+`,Y=a.img`
     width:100px;
     height:100px;
     padding:10px 0;
     object-fit: contain;
-`,Z=c.div`
+`,Z=a.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
     color:#fff;
     width: 100%;
-`,x=c.span`
+`,x=a.span`
     display:inline;
     margin-top:10px;
     font-size:50px;
@@ -261,7 +261,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
         margin:0;
         font-size:30px;
     }
-`,ee=c.div`
+`,ee=a.div`
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -282,13 +282,13 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
         object-fit: cover;
         transform:${t=>`rotate(${t.deg-40}deg)`};
     }
-`,te=c.div`
+`,te=a.div`
     display:flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     margin-top:20px;
-`,ie=c.div`
+`,ie=a.div`
     display:flex;
     width: 100%;
     margin:0 20px;
@@ -296,7 +296,7 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
     span{
         color:#fff;
     }
-`,ne=c.div`
+`,ne=a.div`
     width: 100%;
     height: 10px;
     margin:8px 20px;
@@ -322,4 +322,4 @@ var M=Object.defineProperty;var C=Object.getOwnPropertySymbols;var T=Object.prot
         width: ${t=>t.porcentage+"%"};
         height: 10px;
     }
-`,oe=({climes:t})=>e(S,{center:!0,children:t.slice(1,t.length).map((i,r)=>o(z,{children:[e(h,{children:r==0?"Tomorrow":j(i.applicable_date)}),e(Y,{src:`../${i.weather_state_name.replaceAll(" ","")}.png`,alt:""}),o(Z,{children:[o("p",{children:[Math.ceil(i.max_temp),"\xB0C"]}),o("b",{children:[Math.ceil(i.min_temp),"\xB0C"]})]})]},r))}),re=({wind_direction_compass:t,wind_direction:i,humidity:r,visibility:l,air_pressure:n})=>o(S,{center:!0,children:[o(u,{children:[e(h,{children:"Wind status"}),o(x,{children:[Math.ceil(i)," ",e("p",{children:"mph"})]}),o(ee,{deg:Math.ceil(i),children:[e("div",{children:e("img",{src:"../location-arrow-solid.svg",alt:""})}),e(h,{children:t})]})]}),o(u,{children:[e(h,{children:"Humidity"}),o(x,{children:[r," ",e("p",{children:"%"})]}),o(te,{children:[o(ie,{children:[e("span",{children:"0"}),e("span",{children:"50"}),e("span",{children:"100"})]}),e(ne,{porcentage:r})]})]}),o(u,{children:[e(h,{children:"Visibility"}),o(x,{children:[Math.ceil(l)," ",e("p",{children:"miles"})]})]}),o(u,{children:[e(h,{children:"Air Pressure"}),o(x,{children:[Math.ceil(n)," ",e("p",{children:"mb"})]})]})]}),ce=({climes:t})=>o(X,{children:[e("div",{className:"flex justify-center",children:e(oe,{climes:t})}),e("h3",{children:"Today's Hightlights"}),e(re,m({},t[0])),o(h,{style:{marginTop:40,marginBottom:10},children:["created by ",e("b",{children:"Dani7uG"})," - devChallenges.io"]})]}),ae=()=>{const[t,i]=f.exports.useState([]),[r,l]=f.exports.useState(""),[n,a]=f.exports.useState(!1),d=async(s,p,g)=>{!s&&p&&g&&(s=(await b(`https://www.metaweather.com/api/location/search?lattlong=${p},${g}`))[0].woeid);const w=await b(`https://www.metaweather.com/api/location/${s||44418}`);l(w.title),i(w.consolidated_weather)};return f.exports.useEffect(()=>{if("geolocation"in navigator)return navigator.geolocation.getCurrentPosition(s=>{const{latitude:p,longitude:g}=s.coords;d(null,p,g)});d()},[]),o(k,{children:[e(B,{}),e(U,{getClime:d,country:r,clime:t[0],search:n,setSearch:a}),e(ce,{climes:t})]})};I.render(e(H.StrictMode,{children:e(ae,{})}),document.getElementById("root"));
+`,oe=({climes:t})=>e(S,{center:!0,children:t.slice(1,t.length).map((i,r)=>o(z,{children:[e(h,{children:r==0?"Tomorrow":j(i.applicable_date)}),e(Y,{src:`../weather-api-Dani7uG/${i.weather_state_name.replaceAll(" ","")}.png`,alt:""}),o(Z,{children:[o("p",{children:[Math.ceil(i.max_temp),"\xB0C"]}),o("b",{children:[Math.ceil(i.min_temp),"\xB0C"]})]})]},r))}),re=({wind_direction_compass:t,wind_direction:i,humidity:r,visibility:l,air_pressure:n})=>o(S,{center:!0,children:[o(u,{children:[e(h,{children:"Wind status"}),o(x,{children:[Math.ceil(i)," ",e("p",{children:"mph"})]}),o(ee,{deg:Math.ceil(i),children:[e("div",{children:e("img",{src:"../weather-api-Dani7uG/location-arrow-solid.svg",alt:""})}),e(h,{children:t})]})]}),o(u,{children:[e(h,{children:"Humidity"}),o(x,{children:[r," ",e("p",{children:"%"})]}),o(te,{children:[o(ie,{children:[e("span",{children:"0"}),e("span",{children:"50"}),e("span",{children:"100"})]}),e(ne,{porcentage:r})]})]}),o(u,{children:[e(h,{children:"Visibility"}),o(x,{children:[Math.ceil(l)," ",e("p",{children:"miles"})]})]}),o(u,{children:[e(h,{children:"Air Pressure"}),o(x,{children:[Math.ceil(n)," ",e("p",{children:"mb"})]})]})]}),ae=({climes:t})=>o(X,{children:[e("div",{className:"flex justify-center",children:e(oe,{climes:t})}),e("h3",{children:"Today's Hightlights"}),e(re,m({},t[0])),o(h,{style:{marginTop:40,marginBottom:10},children:["created by ",e("b",{children:"Dani7uG"})," - devChallenges.io"]})]}),ce=()=>{const[t,i]=f.exports.useState([]),[r,l]=f.exports.useState(""),[n,c]=f.exports.useState(!1),d=async(s,p,g)=>{!s&&p&&g&&(s=(await w(`https://www.metaweather.com/api/location/search?lattlong=${p},${g}`))[0].woeid);const b=await w(`https://www.metaweather.com/api/location/${s||44418}`);l(b.title),i(b.consolidated_weather)};return f.exports.useEffect(()=>{if("geolocation"in navigator)return navigator.geolocation.getCurrentPosition(s=>{const{latitude:p,longitude:g}=s.coords;d(null,p,g)});d()},[]),o(k,{children:[e(P,{}),e(U,{getClime:d,country:r,clime:t[0],search:n,setSearch:c}),e(ae,{climes:t})]})};G.render(e(I.StrictMode,{children:e(ce,{})}),document.getElementById("root"));
