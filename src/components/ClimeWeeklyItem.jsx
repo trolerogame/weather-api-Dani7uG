@@ -4,10 +4,10 @@ import {
 	ContainDataClime,
 	Text,
 	ImgClime,
-	ContainMaxMinTemp
+	ContainMaxMinTemp,
 } from '../styles/styleClimesHightlights'
 import { formatDate } from '../utils/formatDate'
-const ClimeWeeklyItem = ({climes}) => {
+const ClimeWeeklyItem = ({ climes, celsius }) => {
 	return (
 		<ContainClimes center>
 			{climes.slice(1, climes.length).map((clime, i) => (
@@ -25,8 +25,16 @@ const ClimeWeeklyItem = ({climes}) => {
 						alt=""
 					/>
 					<ContainMaxMinTemp>
-						<p>{Math.ceil(clime.max_temp)}°C</p>
-						<b>{Math.ceil(clime.min_temp)}°C</b>
+						<p>
+							{celsius
+								? `${Math.ceil(clime.max_temp)}°C`
+								: `${Math.ceil(clime.max_temp * 1.8 + 32)}°F`}
+						</p>
+						<b>
+							{celsius
+								? `${Math.ceil(clime.min_temp)}°C`
+								: `${Math.ceil(clime.min_temp * 1.8 + 32)}°F`}
+						</b>
 					</ContainMaxMinTemp>
 				</ContainDataClime>
 			))}

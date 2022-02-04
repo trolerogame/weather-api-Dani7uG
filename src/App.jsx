@@ -7,6 +7,7 @@ const App = () => {
 	const [clime, setClime] = useState([])
 	const [country, setCountry] = useState('')
 	const [search, setSearch] = useState(false)
+	const [celsius,setCelsius] = useState(true)
 	const getClime = async (woeid, lat, log) => {
 		if (!woeid && lat && log)
 			woeid = (
@@ -40,8 +41,13 @@ const App = () => {
 				clime={clime[0]}
 				search={search}
 				setSearch={setSearch}
+				celsius={celsius}
 			/>
-			<ClimeWeeklyHightlights climes={clime} />
+			<ClimeWeeklyHightlights 
+				climes={clime} 
+				celsius={celsius}
+				setCelsius={setCelsius}
+			/>
 		</>
 	)
 }

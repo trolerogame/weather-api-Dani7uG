@@ -16,6 +16,7 @@ const ClimeToday = ({
 	applicable_date,
 	the_temp,
 	weather_state_name,
+	celsius
 }) => {
 	const today = formatDate(applicable_date)
 	return (
@@ -39,8 +40,8 @@ const ClimeToday = ({
 				/>
 			</ContainImgClime>
 			<ContainDegrees>
-				<p>{Math.ceil(the_temp || 0)}</p>
-				<b>°C</b>
+				<p>{celsius ? Math.ceil(the_temp) : Math.ceil(the_temp * 1.8 + 32)}</p>
+				<b>{celsius ? '°C' : '°F'}</b>
 			</ContainDegrees>
 			<WeatherState>Shower</WeatherState>
 			<Time>

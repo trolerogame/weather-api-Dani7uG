@@ -4,22 +4,21 @@ import styled from 'styled-components'
 
 export const ContainClimesHighlight = styled.div`
     background-color:rgb(16,14,29);
-    padding-top:80px
-    ;
-    height:auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
+    padding-top:80px;
     .flex {
         display:flex;
     }
     .justify-center{
         justify-content: center;
     }
-    #containerWidth{
-        width:130ch;
+    #container{
+        max-width:120ch;
+        position: relative;
+        margin: auto;
         height:auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     h3{
         color:#fff;
@@ -27,15 +26,31 @@ export const ContainClimesHighlight = styled.div`
         font-size:30px;
 
     }
-    @media(min-width: 768px) {
-        
-    }
 `
 
+export const ContainButtonsDeg = styled.div`
+    position:absolute;
+    right:0px;
+    top:-50px;
+`
+
+export const ButtonDeg = styled.button`
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    font-size:18px;
+    text-align:center;
+    line-height:20px;
+    font-weight:bold;
+    margin:0 10px;
+    border:none;
+    background:${props => props.deg ? '#FFF' : 'rgb(88,86,118)'};
+    color:${props => props.deg ? 'rgb(16,14,29)' : '#FFF'};
+    cursor:pointer;
+`
 
 export const ContainClimes = styled.div`
     display:flex;
-    margin:0 20px;
     gap:40px 20px;
     flex-wrap: wrap;
     justify-content:${props => props.center ? 'center' : 'start'};
@@ -53,9 +68,10 @@ export const ContainDataClime = styled.div`
 
 export const ContainDataClimeToday = styled(ContainDataClime)`
     max-width:100%;
-    width:380px;
+    width:360px;
     height:auto;
     padding:30px;
+    margin:0 10px;
 `
 
 export const Text = styled.p`

@@ -2,7 +2,7 @@ import React from 'react'
 import { ContainClimeSearch } from '../styles/styleClimeSearch'
 import ClimeToday from './ClimeToday'
 import SearchCountry from './SearchCountry'
-const ClimeTodayAndSearch = ({ getClime,country, clime, search, setSearch }) => {
+const ClimeTodayAndSearch = ({ getClime,country, clime, search, setSearch,celsius }) => {
 	return (
 		<ContainClimeSearch>
 			{search ? (
@@ -11,7 +11,8 @@ const ClimeTodayAndSearch = ({ getClime,country, clime, search, setSearch }) => 
 				<ClimeToday
 					setSearch={setSearch}
 					country={country}
-					{...clime}
+					celsius={celsius}
+					{...clime}	
 				/>
 			)}
 		</ContainClimeSearch>
