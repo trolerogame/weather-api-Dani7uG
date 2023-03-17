@@ -17,10 +17,10 @@ const ClimeWeeklyHightlights = ({ climes,setCelsius,celsius }) => {
 					<ButtonDeg deg={celsius === false} onClick={() => setCelsius(false)}>°F</ButtonDeg>
 				</ContainButtonsDeg>
 				<div className='flex justify-center'>	
-					<ClimeWeeklyItem climes={climes} celsius={celsius} />
+					<ClimeWeeklyItem climes={climes.forecast && climes.forecast.forecastday} celsius={celsius} />
 				</div>
 				<h3>Today's Hightlights</h3>
-				<HightlightsItem {...climes[0]}/>
+				<HightlightsItem {...climes.current}/>
 				<Text style={{marginTop:40,marginBottom:10}}>created by <b>Dani7uG</b> - devChallenges.io</Text>
 			</div>
 		</ContainClimesHighlight>

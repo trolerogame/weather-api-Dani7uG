@@ -8,32 +8,30 @@ import {
 } from '../styles/styleClimesHightlights'
 import { formatDate } from '../utils/formatDate'
 const ClimeWeeklyItem = ({ climes, celsius }) => {
+	// console.log(climes)
 	return (
 		<ContainClimes center>
-			{climes.slice(1, climes.length).map((clime, i) => (
+			{climes && climes.slice(1, 6).map(({date,day}, i) => (
 				<ContainDataClime key={i}>
 					<Text>
 						{i == 0
 							? 'Tomorrow'
-							: formatDate(clime.applicable_date)}
+							: formatDate(date)}
 					</Text>
 					<ImgClime
-						src={`../weather-api-Dani7uG/${clime.weather_state_name.replaceAll(
-							' ',
-							''
-						)}.png`}
+						src={day.condition.icon}
 						alt=""
 					/>
 					<ContainMaxMinTemp>
 						<p>
 							{celsius
-								? `${Math.ceil(clime.max_temp)}°C`
-								: `${Math.ceil(clime.max_temp * 1.8 + 32)}°F`}
+								? `${Math.ceil(day.maxtemp_c)}°C`
+								: `${Math.ceil(day.maxtemp_f)}°F`}
 						</p>
 						<b>
 							{celsius
-								? `${Math.ceil(clime.min_temp)}°C`
-								: `${Math.ceil(clime.min_temp * 1.8 + 32)}°F`}
+								? `${Math.ceil(day.mintemp_c)}°C`
+								: `${Math.ceil(day.mintemp_f)}°F`}
 						</b>
 					</ContainMaxMinTemp>
 				</ContainDataClime>

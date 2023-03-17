@@ -14,9 +14,10 @@ const ClimeToday = ({
 	country,
 	setSearch,
 	applicable_date,
-	the_temp,
-	weather_state_name,
-	celsius
+	temp_c,
+	temp_f,
+	celsius,
+	condition
 }) => {
 	const today = formatDate(applicable_date)
 	return (
@@ -31,19 +32,15 @@ const ClimeToday = ({
 			</ContainButtons>
 			<ContainImgClime>
 				<img
-					src={`../weather-api-Dani7uG/${
-						weather_state_name
-							? weather_state_name.replaceAll(' ', '')
-							: 'Clear'
-					}.png`}
+					src={condition.icon}
 					alt=""
 				/>
 			</ContainImgClime>
 			<ContainDegrees>
-				<p>{celsius ? Math.ceil(the_temp) : Math.ceil(the_temp * 1.8 + 32)}</p>
+				<p>{Math.ceil(celsius ? temp_c : temp_f)}</p>
 				<b>{celsius ? '°C' : '°F'}</b>
 			</ContainDegrees>
-			<WeatherState>Shower</WeatherState>
+			<WeatherState>{condition.text}</WeatherState>
 			<Time>
 				Today <span>•</span> {today}
 			</Time>

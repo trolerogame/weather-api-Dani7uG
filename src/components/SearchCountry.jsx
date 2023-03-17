@@ -8,13 +8,13 @@ const SearchCountry = ({ getClime,setSearch }) => {
 	const getCountries = async (e) => {
 		e.preventDefault()
 		const json = await fetchClime(
-			`https://www.metaweather.com/api/location/search?query=${input.current.value}`
+			'search',input.current.value
 		)
 		setCoutries(json)
 	}
 
-	const updateClime = (woeid) => {
-		getClime(woeid)
+	const updateClime = (city) => {
+		getClime(city)
 		input.current.value = ''
 		setCoutries([])
 	}
@@ -28,8 +28,8 @@ const SearchCountry = ({ getClime,setSearch }) => {
 			</ContainInputSearch>
 			<ContainItemsSearch>
 				{countries.map((country, i) => (
-					<button onClick={() => updateClime(country.woeid)} key={i}>
-						<p>{country.title}</p> <img src="../weather-api-Dani7uG/angle-right-solid.svg" alt="" />
+					<button onClick={() => updateClime(country.name)} key={i}>
+						<p>{country.name}</p> <img src="../weather-api-Dani7uG/angle-right-solid.svg" alt="" />
 					</button>
 				))}
 			</ContainItemsSearch>

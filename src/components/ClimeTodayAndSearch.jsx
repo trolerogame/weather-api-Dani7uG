@@ -8,12 +8,12 @@ const ClimeTodayAndSearch = ({ getClime,country, clime, search, setSearch,celsiu
 			{search ? (
 				<SearchCountry getClime={getClime} setSearch={setSearch}/>
 			) : (
-				<ClimeToday
+				<>{clime.current && <ClimeToday
 					setSearch={setSearch}
 					country={country}
 					celsius={celsius}
-					{...clime}	
-				/>
+					{...clime.current}	
+				/>}</>
 			)}
 		</ContainClimeSearch>
 	)
