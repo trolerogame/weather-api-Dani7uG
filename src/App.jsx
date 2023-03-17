@@ -4,22 +4,18 @@ import ClimeTodayAndSearch from './components/ClimeTodayAndSearch'
 import ClimeWeeklyHightlights from './components/ClimeWeeklyHightlights'
 import { fetchClime } from './utils/fetchClime'
 const App = () => {
-	const [clime, setClime] = useState([])
+	const [clime, setClime] = useState({})
 	const [country, setCountry] = useState('')
 	const [search, setSearch] = useState(false)
 	const [celsius,setCelsius] = useState(true)
-	const getClime = async (woeid, lat, log) => {
-		if (!woeid && lat && log)
-			woeid = (
-				await fetchClime(
-					`https://www.metaweather.com/api/location/search?lattlong=${lat},${log}`
-				)
-			)[0]['woeid']
+	const getClime = async (city, lat, log) => {
 		const json = await fetchClime(
-			`https://www.metaweather.com/api/location/${woeid || 44418}`
-		)
-		setCountry(json.title)
-		setClime(json.consolidated_weather)
+			'forecast',
+			lat && log ? `${lat},${log}` : `/${city || 'Argentina'}`,
+			'&days=7&aqi=no&alerts=no'
+		)     
+		setCountry(json.location.country)
+		setClime(json)
 	}
 
 	useEffect(() => {
@@ -38,7 +34,7 @@ const App = () => {
 			<ClimeTodayAndSearch
 				getClime={getClime}
 				country={country}
-				clime={clime[0]}
+				clime={clime}
 				search={search}
 				setSearch={setSearch}
 				celsius={celsius}
