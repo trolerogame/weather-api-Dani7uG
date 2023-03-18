@@ -1,13 +1,13 @@
 {
   "name": "weather_api",
   "version": "0.0.0",
-  "homepage":"https://trolerogame.github.io/weather-api-Dani7uG",
+  "homepage": "https://trolerogame.github.io/weather-api-Dani7uG",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
